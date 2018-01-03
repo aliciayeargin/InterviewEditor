@@ -297,16 +297,13 @@ namespace InterviewEditor_v0._1
             // Initialize the list for keeping track of opened windows.
             windowList = new List<Form>();
 
-            // TEST
-            //System.Windows.Controls.TextBox exampleTextbox = new System.Windows.Controls.TextBox();
-            //exampleTextbox.SpellCheck.IsEnabled = true;
-            //elementHost1.Child = exampleTextbox;
-            // END TEST
-
             // DEBUG: Load the example file.
-            //filePathName = "D:\\Projects\\VS\\interview_dialog_editor\\InterviewEditor_v0.1\\InterviewEditor_v0.1\\bin\\Debug\\example.txt";
-            //Text = "Interview Editor (v0.1) - " + filePathName;
-            //loadFile();
+            if (File.Exists(localFolderPath + "example.txt"))
+            {
+                filePathName = localFolderPath + "example.txt";
+                Text = "Interview Editor (v0.1) - " + filePathName;
+                loadFile();
+            }
             // END DEBUG.
         }
 

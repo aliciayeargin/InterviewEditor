@@ -314,6 +314,8 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         // Function: Create a new file.
         // ----------------------------------------------------------------------------------------------------
+        [STAThread]
+
         void newFile()
         {
             SaveFileDialog selectFileDialog = new SaveFileDialog();
@@ -341,6 +343,7 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         // Function: Export data to current file.
         // ----------------------------------------------------------------------------------------------------
+        [STAThread]
         void saveFile()
         {
             // Check to see if a file hasn't been selected yet.
@@ -476,6 +479,7 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         // Function: File select dialog and export data.
         // ----------------------------------------------------------------------------------------------------
+        [STAThread]
         void saveNewFile()
         {
             SaveFileDialog selectFileDialog = new SaveFileDialog();
@@ -535,6 +539,8 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         // Function: File select dialog for the load file.
         // ----------------------------------------------------------------------------------------------------
+        [STAThread]
+
         void loadFileDialog()
         {
             OpenFileDialog loadFileDialog = new OpenFileDialog();

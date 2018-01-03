@@ -1,0 +1,2 @@
+[Prompt to save on exit]=false
+[Case sensitive searches]=false

@@ -1,0 +1,10 @@
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\bin\Debug\InterviewEditor_v0.1.exe.config
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\bin\Debug\InterviewEditor_v0.1.exe
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\bin\Debug\InterviewEditor_v0.1.pdb
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0.1.csprojResolveAssemblyReference.cache
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0._1.Properties.Resources.resources
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0.1.csproj.GenerateResource.Cache
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0.1.exe
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0.1.pdb
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0._1.Form_MainEditor.resources
+D:\Projects\VS\interview_dialog_editor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0._1.Form_BeatTable.resources

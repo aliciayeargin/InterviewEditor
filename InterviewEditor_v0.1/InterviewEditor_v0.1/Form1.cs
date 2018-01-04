@@ -202,7 +202,6 @@ namespace InterviewEditor_v0._1
         string filePathName;                // The path and name of the file loaded in.
         string localFolderPath;             // The path to whatever the local folder is.
         string settingsFileName = "InterviewEditor_Settings.txt";   // The file name for the .txt file with the saved settings.
-        string helpFilename = "InterviewEditor_Help.txt";           // The file name for the .txt file with the help information.
 
         System.Windows.Controls.TextBox textbox_General_MainText;
         System.Windows.Controls.TextBox textbox_Choice_ChoiceText_1;
@@ -1670,19 +1669,7 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         void loadHelp()
         {
-            // Check to make sure that the help file exists.
-            if (File.Exists(localFolderPath + helpFilename))
-            {
-                // Open the help file.
-                System.Diagnostics.Process.Start(localFolderPath + helpFilename);
-            }
-
-            // Otherwise, the help file is missing.
-            else
-            {
-                // Show an error in the status strip.
-                label_statusStrip.Text = "ERROR: Unable to find help file: " + localFolderPath + helpFilename;
-            }
+            System.Diagnostics.Process.Start("https://github.com/aliciayeargin/InterviewEditor/wiki");
         }
         // ----------------------------------------------------------------------------------------------------
 
@@ -1691,7 +1678,11 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         void showVersion()
         {
-            MessageBox.Show("Version: 0.1\nCreator: Alicia Yeargin");
+            // Initialize an About Information window.
+            Form_AboutInformation aboutWindow = new Form_AboutInformation();
+
+            // Show the window.
+            aboutWindow.Show();
         }
         // ----------------------------------------------------------------------------------------------------
 

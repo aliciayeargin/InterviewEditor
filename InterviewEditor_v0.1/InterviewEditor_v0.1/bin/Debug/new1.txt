@@ -1,5 +1,0 @@
-100000|default|none|Narrative|Hey, how are you doing?|100001
-100001|none|none|Choice||1|I'm great. Thank you!|100002|2|I'm doing alright.|100003|3|Everything sucks.|100004
-100002|none|none|Narrative|That's great!|-1
-100003|none|none|Narrative|That's delightful.|-1
-100004|none|none|Narrative|Oh no!|-1

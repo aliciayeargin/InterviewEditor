@@ -1,5 +1,0 @@
-100000|default|none|Narrative|Hello, here's the main text.|100001
-100001|default|none|Narrative|Hello, here's more text.|100002
-100002|default|none|Choice|Main text for the choice.|1|Choice one text.|100004|2|Choice two text.|100005|3|Choice three text.|100006
-100004|default|none|Narrative|Result for choice one.|-1
-100005|default|none|Narrative|Result for choice two.|-1

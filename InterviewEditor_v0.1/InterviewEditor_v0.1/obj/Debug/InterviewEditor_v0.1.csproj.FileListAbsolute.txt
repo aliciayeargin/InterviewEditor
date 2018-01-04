@@ -18,3 +18,4 @@ D:\Git\InterviewEditor\InterviewEditor\InterviewEditor_v0.1\InterviewEditor_v0.1
 D:\Git\InterviewEditor\InterviewEditor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0._1.Form_BeatTable.resources
 D:\Git\InterviewEditor\InterviewEditor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0._1.Properties.Resources.resources
 D:\Git\InterviewEditor\InterviewEditor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0.1.csproj.GenerateResource.Cache
+D:\Git\InterviewEditor\InterviewEditor\InterviewEditor_v0.1\InterviewEditor_v0.1\obj\Debug\InterviewEditor_v0._1.Form_AboutInformation.resources

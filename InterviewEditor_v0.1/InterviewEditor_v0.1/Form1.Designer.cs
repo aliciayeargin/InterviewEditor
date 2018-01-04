@@ -127,6 +127,7 @@
             this.label_statusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.button_Menu_Find = new System.Windows.Forms.Button();
             this.textbox_Menu_Find = new System.Windows.Forms.TextBox();
+            this.findBeatByTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_backgroundDock.SuspendLayout();
             this.prevNextLayoutPanel.SuspendLayout();
             this.panel_Previous.SuspendLayout();
@@ -1032,7 +1033,7 @@
             this.promptToSaveOnExitToolStripMenuItem,
             this.caseSensitiveSearchToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -1059,6 +1060,7 @@
             this.findDeadBeatsToolStripMenuItem,
             this.findOrphanBeatsToolStripMenuItem,
             this.findPreviousBeatsToolStripMenuItem,
+            this.findBeatByTextToolStripMenuItem,
             this.toolStripSeparator1,
             this.previousIDToolStripMenuItem,
             this.nextIDToolStripMenuItem,
@@ -1206,6 +1208,14 @@
             this.textbox_Menu_Find.Size = new System.Drawing.Size(100, 20);
             this.textbox_Menu_Find.TabIndex = 101;
             // 
+            // findBeatByTextToolStripMenuItem
+            // 
+            this.findBeatByTextToolStripMenuItem.Name = "findBeatByTextToolStripMenuItem";
+            this.findBeatByTextToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.findBeatByTextToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.findBeatByTextToolStripMenuItem.Text = "Find beat by text";
+            this.findBeatByTextToolStripMenuItem.Click += new System.EventHandler(this.findBeatByTextToolStripMenuItem_Click);
+            // 
             // Form_MainEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1345,6 +1355,7 @@
         private System.Windows.Forms.Integration.ElementHost elementHost_Choice_ChoiceText_3;
         private System.Windows.Forms.Integration.ElementHost elementHost_Choice_ChoiceText_2;
         private System.Windows.Forms.Integration.ElementHost elementHost_Choice_ChoiceText_1;
+        private System.Windows.Forms.ToolStripMenuItem findBeatByTextToolStripMenuItem;
     }
 }
 

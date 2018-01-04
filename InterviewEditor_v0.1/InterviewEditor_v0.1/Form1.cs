@@ -2343,5 +2343,11 @@ namespace InterviewEditor_v0._1
         {
             findAllPrevious();
         }
+
+        // Event: Menu: View > Find beat by text or CTRL + F
+        private void findBeatByTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textbox_Menu_Find.Focus();
+        }
     }
 }

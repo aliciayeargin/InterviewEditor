@@ -54,6 +54,9 @@
             this.comboBox_Selection = new System.Windows.Forms.ComboBox();
             this.label_Selection_Beat = new System.Windows.Forms.Label();
             this.panel_Choice = new System.Windows.Forms.Panel();
+            this.elementHost_Choice_ChoiceText_3 = new System.Windows.Forms.Integration.ElementHost();
+            this.elementHost_Choice_ChoiceText_2 = new System.Windows.Forms.Integration.ElementHost();
+            this.elementHost_Choice_ChoiceText_1 = new System.Windows.Forms.Integration.ElementHost();
             this.label_Choice = new System.Windows.Forms.Label();
             this.button_Choice_NewID_All = new System.Windows.Forms.Button();
             this.button_Choice_LoadID_1 = new System.Windows.Forms.Button();
@@ -84,6 +87,7 @@
             this.button_Narrative_NewID = new System.Windows.Forms.Button();
             this.label_Narrative_NextID = new System.Windows.Forms.Label();
             this.panel_General = new System.Windows.Forms.Panel();
+            this.elementHost_General_MainText = new System.Windows.Forms.Integration.ElementHost();
             this.textbox_General_ID = new System.Windows.Forms.TextBox();
             this.textbox_General_CharacterImage = new System.Windows.Forms.TextBox();
             this.label_General = new System.Windows.Forms.Label();
@@ -123,10 +127,6 @@
             this.label_statusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.button_Menu_Find = new System.Windows.Forms.Button();
             this.textbox_Menu_Find = new System.Windows.Forms.TextBox();
-            this.elementHost_General_MainText = new System.Windows.Forms.Integration.ElementHost();
-            this.elementHost_Choice_ChoiceText_1 = new System.Windows.Forms.Integration.ElementHost();
-            this.elementHost_Choice_ChoiceText_2 = new System.Windows.Forms.Integration.ElementHost();
-            this.elementHost_Choice_ChoiceText_3 = new System.Windows.Forms.Integration.ElementHost();
             this.panel_backgroundDock.SuspendLayout();
             this.prevNextLayoutPanel.SuspendLayout();
             this.panel_Previous.SuspendLayout();
@@ -478,6 +478,39 @@
             this.panel_Choice.Size = new System.Drawing.Size(760, 240);
             this.panel_Choice.TabIndex = 4;
             // 
+            // elementHost_Choice_ChoiceText_3
+            // 
+            this.elementHost_Choice_ChoiceText_3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost_Choice_ChoiceText_3.Location = new System.Drawing.Point(108, 188);
+            this.elementHost_Choice_ChoiceText_3.Name = "elementHost_Choice_ChoiceText_3";
+            this.elementHost_Choice_ChoiceText_3.Size = new System.Drawing.Size(552, 20);
+            this.elementHost_Choice_ChoiceText_3.TabIndex = 3015;
+            this.elementHost_Choice_ChoiceText_3.Text = "elementHost3";
+            this.elementHost_Choice_ChoiceText_3.Child = null;
+            // 
+            // elementHost_Choice_ChoiceText_2
+            // 
+            this.elementHost_Choice_ChoiceText_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost_Choice_ChoiceText_2.Location = new System.Drawing.Point(108, 108);
+            this.elementHost_Choice_ChoiceText_2.Name = "elementHost_Choice_ChoiceText_2";
+            this.elementHost_Choice_ChoiceText_2.Size = new System.Drawing.Size(552, 20);
+            this.elementHost_Choice_ChoiceText_2.TabIndex = 3014;
+            this.elementHost_Choice_ChoiceText_2.Text = "elementHost2";
+            this.elementHost_Choice_ChoiceText_2.Child = null;
+            // 
+            // elementHost_Choice_ChoiceText_1
+            // 
+            this.elementHost_Choice_ChoiceText_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost_Choice_ChoiceText_1.Location = new System.Drawing.Point(108, 28);
+            this.elementHost_Choice_ChoiceText_1.Name = "elementHost_Choice_ChoiceText_1";
+            this.elementHost_Choice_ChoiceText_1.Size = new System.Drawing.Size(552, 20);
+            this.elementHost_Choice_ChoiceText_1.TabIndex = 3006;
+            this.elementHost_Choice_ChoiceText_1.Text = "elementHost1";
+            this.elementHost_Choice_ChoiceText_1.Child = null;
+            // 
             // label_Choice
             // 
             this.label_Choice.AutoSize = true;
@@ -804,6 +837,17 @@
             this.panel_General.Name = "panel_General";
             this.panel_General.Size = new System.Drawing.Size(760, 124);
             this.panel_General.TabIndex = 2;
+            // 
+            // elementHost_General_MainText
+            // 
+            this.elementHost_General_MainText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost_General_MainText.Location = new System.Drawing.Point(108, 100);
+            this.elementHost_General_MainText.Name = "elementHost_General_MainText";
+            this.elementHost_General_MainText.Size = new System.Drawing.Size(648, 20);
+            this.elementHost_General_MainText.TabIndex = 3005;
+            this.elementHost_General_MainText.Text = "elementHost1";
+            this.elementHost_General_MainText.Child = null;
             // 
             // textbox_General_ID
             // 
@@ -1161,42 +1205,6 @@
             this.textbox_Menu_Find.Name = "textbox_Menu_Find";
             this.textbox_Menu_Find.Size = new System.Drawing.Size(100, 20);
             this.textbox_Menu_Find.TabIndex = 101;
-            // 
-            // elementHost_General_MainText
-            // 
-            this.elementHost_General_MainText.Location = new System.Drawing.Point(108, 100);
-            this.elementHost_General_MainText.Name = "elementHost_General_MainText";
-            this.elementHost_General_MainText.Size = new System.Drawing.Size(648, 20);
-            this.elementHost_General_MainText.TabIndex = 3005;
-            this.elementHost_General_MainText.Text = "elementHost1";
-            this.elementHost_General_MainText.Child = null;
-            // 
-            // elementHost_Choice_ChoiceText_1
-            // 
-            this.elementHost_Choice_ChoiceText_1.Location = new System.Drawing.Point(108, 28);
-            this.elementHost_Choice_ChoiceText_1.Name = "elementHost_Choice_ChoiceText_1";
-            this.elementHost_Choice_ChoiceText_1.Size = new System.Drawing.Size(552, 20);
-            this.elementHost_Choice_ChoiceText_1.TabIndex = 3006;
-            this.elementHost_Choice_ChoiceText_1.Text = "elementHost1";
-            this.elementHost_Choice_ChoiceText_1.Child = null;
-            // 
-            // elementHost_Choice_ChoiceText_2
-            // 
-            this.elementHost_Choice_ChoiceText_2.Location = new System.Drawing.Point(108, 108);
-            this.elementHost_Choice_ChoiceText_2.Name = "elementHost_Choice_ChoiceText_2";
-            this.elementHost_Choice_ChoiceText_2.Size = new System.Drawing.Size(552, 20);
-            this.elementHost_Choice_ChoiceText_2.TabIndex = 3014;
-            this.elementHost_Choice_ChoiceText_2.Text = "elementHost2";
-            this.elementHost_Choice_ChoiceText_2.Child = null;
-            // 
-            // elementHost_Choice_ChoiceText_3
-            // 
-            this.elementHost_Choice_ChoiceText_3.Location = new System.Drawing.Point(108, 188);
-            this.elementHost_Choice_ChoiceText_3.Name = "elementHost_Choice_ChoiceText_3";
-            this.elementHost_Choice_ChoiceText_3.Size = new System.Drawing.Size(552, 20);
-            this.elementHost_Choice_ChoiceText_3.TabIndex = 3015;
-            this.elementHost_Choice_ChoiceText_3.Text = "elementHost3";
-            this.elementHost_Choice_ChoiceText_3.Child = null;
             // 
             // Form_MainEditor
             // 

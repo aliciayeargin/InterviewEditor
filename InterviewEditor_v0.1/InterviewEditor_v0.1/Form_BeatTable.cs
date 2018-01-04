@@ -1,4 +1,10 @@
-﻿using System.Collections.Generic;
+﻿// ========================================================================================================================================================================================================
+// Project: Interview Editor
+// File: Form_BeatTable
+// Creator: Alicia Yeargin
+// ========================================================================================================================================================================================================
+
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace InterviewEditor_v0._1
@@ -86,7 +92,7 @@ namespace InterviewEditor_v0._1
         }
         // ----------------------------------------------------------------------------------------------------
 
-        // Double click a cell.
+        // Event: Double click a cell.
         private void dataGridView_Cell_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             loadSelectedCellIntoEditor(e.RowIndex, e.ColumnIndex);

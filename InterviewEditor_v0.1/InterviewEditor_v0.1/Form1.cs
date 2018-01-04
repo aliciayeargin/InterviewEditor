@@ -1,4 +1,10 @@
-﻿using System;
+﻿// ========================================================================================================================================================================================================
+// Project: Interview Editor
+// File: Form_MainEditor
+// Creator: Alicia Yeargin
+// ========================================================================================================================================================================================================
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -201,12 +207,12 @@ namespace InterviewEditor_v0._1
         bool firstLoad;                     // Keep track of whether or not we're in the first loading state.
         string filePathName;                // The path and name of the file loaded in.
         string localFolderPath;             // The path to whatever the local folder is.
-        string settingsFileName = "InterviewEditor_Settings.txt";   // The file name for the .txt file with the saved settings.
+        string settingsFileName = "InterviewEditor_Settings.txt";       // The file name for the .txt file with the saved settings.
 
-        System.Windows.Controls.TextBox textbox_General_MainText;
-        System.Windows.Controls.TextBox textbox_Choice_ChoiceText_1;
-        System.Windows.Controls.TextBox textbox_Choice_ChoiceText_2;
-        System.Windows.Controls.TextBox textbox_Choice_ChoiceText_3;
+        System.Windows.Controls.TextBox textbox_General_MainText;       // WPF textbox that allows for spell check.
+        System.Windows.Controls.TextBox textbox_Choice_ChoiceText_1;    // WPF textbox that allows for spell check.
+        System.Windows.Controls.TextBox textbox_Choice_ChoiceText_2;    // WPF textbox that allows for spell check.
+        System.Windows.Controls.TextBox textbox_Choice_ChoiceText_3;    // WPF textbox that allows for spell check.
 
         // ----------------------------------------------------------------------------------------------------
 
@@ -218,7 +224,7 @@ namespace InterviewEditor_v0._1
         {
             InitializeComponent();
 
-            // Initialize the text boxes.
+            // Initialize the WPF text boxes.
             textbox_General_MainText = new System.Windows.Controls.TextBox();
             textbox_General_MainText.SpellCheck.IsEnabled = true;
             elementHost_General_MainText.Child = textbox_General_MainText;
@@ -252,7 +258,7 @@ namespace InterviewEditor_v0._1
             caseSensitiveSearchToolStripMenuItem.Click += changeSettingStripMenuItem_Click;
             this.FormClosing += Form1_FormClosing;
 
-            // Enter for the textboxes.
+            // Add events for pressing the Enter key for the textboxes.
             textbox_General_BackgroundImage.KeyDown += textboxHitEnterKey;
             textbox_General_CharacterImage.KeyDown += textboxHitEnterKey;
             textbox_General_MainText.KeyDown += UITextboxHitEnterKey;
@@ -314,7 +320,6 @@ namespace InterviewEditor_v0._1
         // Function: Create a new file.
         // ----------------------------------------------------------------------------------------------------
         [STAThread]
-
         void newFile()
         {
             SaveFileDialog selectFileDialog = new SaveFileDialog();
@@ -539,7 +544,6 @@ namespace InterviewEditor_v0._1
         // Function: File select dialog for the load file.
         // ----------------------------------------------------------------------------------------------------
         [STAThread]
-
         void loadFileDialog()
         {
             OpenFileDialog loadFileDialog = new OpenFileDialog();
@@ -715,7 +719,7 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
         void exitProgram()
         {
-            // Check if the user wants to be prompted to save upon exiting.
+            // Check if the user wants to be prompted to save upon exiting. (Also, if there's nothing loaded, aka selection panel isn't even enabled, don't prompt to save.)
             if ((promptToSaveOnExitToolStripMenuItem.Checked == true) && (panel_Selection.Enabled == true))
             {
                 DialogResult saveDialogResult = MessageBox.Show("Would you like to save before closing?", "Just checking...", MessageBoxButtons.YesNo);
@@ -1516,7 +1520,7 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
 
         // ----------------------------------------------------------------------------------------------------
-        // Function: Displays a list of beats.
+        // Function: Displays a specified list of beats.
         // ----------------------------------------------------------------------------------------------------
         void loadSpecifiedBeatTable(List<StoryBeat> beat_list, string windowName)
         {
@@ -1645,7 +1649,7 @@ namespace InterviewEditor_v0._1
         // ----------------------------------------------------------------------------------------------------
 
         // ----------------------------------------------------------------------------------------------------
-        // Function: Loads the beat table form.
+        // Function: Loads the beat table for all the currently existing beats.
         // ----------------------------------------------------------------------------------------------------
         void loadCurrentBeatTable()
         {
@@ -1918,49 +1922,49 @@ namespace InterviewEditor_v0._1
         // EVENTS
         // ========================================================================================================================================================================================================
 
-        // Menu Strip: New
+        // Event: Menu Strip: New
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             newFile();
         }
 
-        // Menu Strip: Save
+        // Event: Menu Strip: Save
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFile();
         }
 
-        // Menu Strip: Save as 
+        // Event: Menu Strip: Save as 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveNewFile();
         }
 
-        // Menu Strip: Load
+        // Event: Menu Strip: Load
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadFileDialog();
         }
 
-        // Menu Strip: Exit
+        // Event: Menu Strip: Exit
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        // General: Previous
+        // Event: General: Previous
         private void button_General_Previous_Click(object sender, EventArgs e)
         {
             previousBeat();
         }
 
-        // General: Next
+        // Event: General: Next
         private void button_General_Next_Click(object sender, EventArgs e)
         {
             nextBeat();
         }
 
-        // Combobox: Beat Type
+        // Event: Combobox: Beat Type change index
         private void comboBox_General_BeatType_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Check if Narrative beat is being changed to a Choice beat.
@@ -1976,19 +1980,19 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Menu Strip: Previous ID
+        // Event: Menu Strip: Previous ID
         private void previousIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             previousBeat();
         }
 
-        // Menu Strip: Next ID
+        // Event: Menu Strip: Next ID
         private void nextIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             nextBeat();
         }
 
-        // Texbox: Leave Background Image
+        // Event: Texbox: Leave Background Image
         private void textbox_General_BackgroundImage_Leave(object sender, EventArgs e)
         {
             // Write data to list.
@@ -1997,7 +2001,7 @@ namespace InterviewEditor_v0._1
             label_statusStrip.Text = "Updated: Background Image.";
         }
 
-        // Texbox: Leave Character Image
+        // Event: Texbox: Leave Character Image
         private void textbox_General_CharacterImage_Leave(object sender, EventArgs e)
         {
             // Write data to list.
@@ -2006,7 +2010,7 @@ namespace InterviewEditor_v0._1
             label_statusStrip.Text = "Updated: Character Image.";
         }
 
-        // Texbox: Leave Main Text.
+        // Event: Texbox: Leave Main Text.
         private void textbox_General_MainText_Leave(object sender, EventArgs e)
         {
             // Write data to list.
@@ -2015,7 +2019,7 @@ namespace InterviewEditor_v0._1
             label_statusStrip.Text = "Updated: Main Text.";
         }
 
-        // ComboBox: Leave Next ID.
+        // Event: ComboBox: Leave Next ID.
         private void comboBox_Narrative_NextID_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Check to make sure that the current beat is a narrative beat.
@@ -2031,7 +2035,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // ComboBox: Change Next ID Choice 1.
+        // Event: ComboBox: Change Next ID Choice 1.
         private void comboBox_Choice_NextID_1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Check to make sure that the current beat is a narrative beat.
@@ -2047,7 +2051,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // ComboBox: Change Next ID Choice 2.
+        // Event: ComboBox: Change Next ID Choice 2.
         private void comboBox_Choice_NextID_2_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Check to make sure that the current beat is a narrative beat.
@@ -2063,7 +2067,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // ComboBox: Change Next ID Choice 3.
+        // Event: ComboBox: Change Next ID Choice 3.
         private void comboBox_Choice_NextID_3_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Check to make sure that the current beat is a narrative beat.
@@ -2079,7 +2083,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Texbox: Leave Choice 1 Text.
+        // Event: Texbox: Leave Choice 1 Text.
         private void textbox_Choice_ChoiceText_1_Leave(object sender, EventArgs e)
         {
             // Write data to list.
@@ -2088,7 +2092,7 @@ namespace InterviewEditor_v0._1
             label_statusStrip.Text = "Updated: Choice 1 Text.";
         }
 
-        // Texbox: Leave Choice 2 Text.
+        // Event: Texbox: Leave Choice 2 Text.
         private void textbox_Choice_ChoiceText_2_Leave(object sender, EventArgs e)
         {
             // Write data to list.
@@ -2097,7 +2101,7 @@ namespace InterviewEditor_v0._1
             label_statusStrip.Text = "Updated: Choice 2 Text.";
         }
 
-        // Texbox: Leave Choice 3 Text.
+        // Event: Texbox: Leave Choice 3 Text.
         private void textbox_Choice_ChoiceText_3_Leave(object sender, EventArgs e)
         {
             // Write data to list.
@@ -2106,7 +2110,7 @@ namespace InterviewEditor_v0._1
             label_statusStrip.Text = "Updated: Choice 3 Text.";
         }
 
-        // ComboBox: ID selection.
+        // Event: ComboBox: ID selection.
         private void comboBox_Selection_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentListIndex = comboBox_Selection.SelectedIndex;
@@ -2114,91 +2118,91 @@ namespace InterviewEditor_v0._1
             updateNextIDFields();
         }
 
-        // Form Closing
+        // Event: Form Closing
         private void Form1_FormClosing(object sender, EventArgs e)
         {
             exitProgram();
         }
 
-        // Plus Button
+        // Event: Click the '+' button
         private void button_Selection_Add_Click(object sender, EventArgs e)
         {
             addBeatSelection();
         }
 
-        // Minus Button
+        // Event: Click the '-' button
         private void button_Selection_Delete_Click(object sender, EventArgs e)
         {
             deleteBeat();
         }
 
-        // Button Click Narrative New ID
+        // Event: Click Narrative 'New' ID button
         private void button_Narrative_NewID_Click(object sender, EventArgs e)
         {
             addBeatNarrativeNextID();
         }
 
-        // Button Click Choice 1 New ID
+        // Event: Click the Choice 1 'New' ID button
         private void button_Choice_NewID_1_Click(object sender, EventArgs e)
         {
             addBeatChoiceNextID(0);
         }
 
-        // Button Click Choice 2 New ID
+        // Event: Click the Choice 1 'New' ID button
         private void button_Choice_NewID_2_Click(object sender, EventArgs e)
         {
             addBeatChoiceNextID(1);
         }
 
-        // Button Click Choice 3 New ID
+        // Event: Click the Choice 1 'New' ID button
         private void button_Choice_NewID_3_Click(object sender, EventArgs e)
         {
             addBeatChoiceNextID(2);
         }
 
-        // Menu: Edit: Find orphan beats...
+        // Event: Menu: Edit: Find orphan beats...
         private void findOrphanBeatsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             findOrphanBeats();
         }
 
-        // Menu: Edit: Find dead beats...
+        // Event: Menu: Edit: Find dead beats...
         private void findDeadBeatsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             findDeadBeats();
         }
 
-        // Menu: Changing the Save Prompt setting.
+        // Event: Menu: Changing the Save Prompt setting.
         private void changeSettingStripMenuItem_Click(object sender, EventArgs e)
         {
             saveSettingsFile();
         }
 
-        // Button: Click choice 1 'Load' button.
+        // Event: Button: Click choice 1 'Load' button.
         private void button_Choice_LoadID_1_Click(object sender, EventArgs e)
         {
             loadChoiceNext(0);
         }
 
-        // Button: Click choice 2 'Load' button.
+        // Event: Button: Click choice 2 'Load' button.
         private void button_Choice_LoadID_2_Click(object sender, EventArgs e)
         {
             loadChoiceNext(1);
         }
 
-        // Button: Click choice 3 'Load' button.
+        // Event: Button: Click choice 3 'Load' button.
         private void button_Choice_LoadID_3_Click(object sender, EventArgs e)
         {
             loadChoiceNext(2);
         }
 
-        // Button: Click the Narrative next 'Load' button.
+        // Event: Button: Click the Narrative next 'Load' button.
         private void button_Narrative_Load_Click(object sender, EventArgs e)
         {
             loadNarrativeNext();
         }
 
-        // Menu/keyboard shortcut: Load the next beat for choice 1.
+        // Event: Menu/keyboard shortcut: Load the next beat for choice 1.
         private void loadChoiceNext1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Check to make sure current list is valid (aka that we did load some beats).
@@ -2212,7 +2216,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Menu/keyboard shortcut: Load the next beat for choice 2
+        // Event: Menu/keyboard shortcut: Load the next beat for choice 2
         private void loadChoiceNext2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Check to make sure current list is valid (aka that we did load some beats).
@@ -2226,7 +2230,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Menu/keyboard shortcut: Load the next beat for choice 3
+        // Event: Menu/keyboard shortcut: Load the next beat for choice 3
         private void loadChoiceNext3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Check to make sure current list is valid (aka that we did load some beats).
@@ -2240,7 +2244,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Button: Choice 'New All'.
+        // Event: Button: Choice 'New All'.
         private void button_Choice_NewID_All_Click(object sender, EventArgs e)
         {
             addBeatChoiceNextID(0);
@@ -2248,31 +2252,31 @@ namespace InterviewEditor_v0._1
             addBeatChoiceNextID(2);
         }
 
-        // Menu About > Help
+        // Event: Menu: About > Help
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadHelp();
         }
 
-        // Menu About > Version
+        // Event: Menu: About > Version
         private void versionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showVersion();
         }
 
-        // Menu Edit > Settings
+        // Event: Menu: Edit > Settings
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openSettingsMenu();
         }
 
-        // Menu View > Beat Table
+        // Event: Menu: View > Beat Table
         private void beatTableToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             loadCurrentBeatTable();
         }
 
-        // Pressing the Enter key in text boxes.
+        // Event: Pressing the Enter key in text boxes.
         private void textboxHitEnterKey(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             // Check that the enter key was pressed.
@@ -2282,7 +2286,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Pressing the Enter key in one of the WPF text boxes.
+        // Event: Pressing the Enter key in one of the WPF text boxes.
         private void UITextboxHitEnterKey(object sender, System.Windows.Input.KeyEventArgs e)
         {
             // Check that the enter key was pressed.
@@ -2292,7 +2296,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Click 'Find' button.
+        // Event: Click 'Find' button.
         private void button_Menu_Find_Click(object sender, EventArgs e)
         {
             // Check whether the user has checked case sensitive for searches.
@@ -2308,7 +2312,7 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Hit Enter key in the Find text box.
+        // Event: Pressing the Enter key in the Find text box.
         private void searchboxHitEnterKey(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             // Check if the enter key was pressed.
@@ -2328,13 +2332,13 @@ namespace InterviewEditor_v0._1
             }
         }
 
-        // Button 'Find All' previous
+        // Event: Button: 'Find All' previous
         private void button1_Click(object sender, EventArgs e)
         {
             findAllPrevious();
         }
 
-        // Menu View > Find previous beats...
+        // Event: Menu: View > Find previous beats...
         private void findPreviousBeatsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             findAllPrevious();
